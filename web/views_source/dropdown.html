@@ -1,0 +1,7 @@
+<div class="dropdown" ng-repeat="menu in menus" lg-select >
+	<span>{{menu.title}}</span>
+    <button   class="btn btn-default dropdown-toggle" type="button">{{menu.records[0].Name}}<span class="caret"></span></button>
+    <ul class="dropdown-menu">
+        <li  ng-click="clickItem($event)" role="presentation" ng-repeat="menuLi in menu.records" ><a data-key="{{menuLi.Key}}" data-value="{{menuLi.Value}}" role="menuitem" tabindex="-1" href="javascript:void(0);">{{menuLi.Name}}</a></li>
+    </ul>
+</div>
